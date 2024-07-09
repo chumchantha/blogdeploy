@@ -1,7 +1,7 @@
 import prisma from "@/lib/db";
 import { notFound } from "next/navigation";
 
-const Post = async ({ params }: { params: { id: string } }) => {
+const Post = async ({ params }: { params: { id: number } }) => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
   const post = await prisma.post.findUnique({
