@@ -8,7 +8,7 @@ const PostsLists = async () => {
 
   return (
     <ul className="flex flex-col gap-4 text-lg">
-      {posts.map((post: { id: string; title: string }) => (
+      {posts.map((post: { id: number; title: string }) => (
         <li key={post.id}>
           <Link href={`/posts/${post.id}`} key={post.id}>
             {post.title}
